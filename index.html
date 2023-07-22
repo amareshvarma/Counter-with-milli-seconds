@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="src/styles.css"/>
+</head>
+
+<body>
+	<div class="container">
+	 <span class="container__title">Countdown timer</span>
+	 <div class ="container__labels">
+		<p class="container__labels-label">Hours</p>
+		<p class="container__labels-label">Minutes</p>
+		<p class="container__labels-label">Seconds</p>
+		<p class="container__labels-label">Milli Seconds</p>
+	</div>
+
+	<div class="container__inputs">
+		<input 
+		type="number"
+		maxlength="2"
+		oninput="this.value=this.value.slice(0,this.maxLength)"
+		 class="container__inputs--time hour"
+		 placeholder="00"/>
+		 <p class="container__inputs--colon">:</p>
+		 <input 
+		 type="number"
+		 maxlength="2"
+		 oninput="this.value=this.value.slice(0,this.maxLength)"
+			class="container__inputs--time minutes"
+			placeholder="00"/>
+			<p class="container__inputs--colon">:</p>
+			<input 
+			type="number"
+			maxlength="2"
+			oninput="this.value=this.value.slice(0,this.maxLength)"
+			 class="container__inputs--time seconds"
+			 placeholder="00"/>
+			 <p class="container__inputs--colon">:</p>
+			 <input 
+			 type="number"
+			 maxlength="3"
+			 oninput="this.value=this.value.slice(0,this.maxLength)"
+				class="container__inputs--time milliseconds"
+				placeholder="00"/>
+	</div>
+	<div class="container__btns">
+		<button class="btn start">Start</button>
+		<button class="btn stop">Stop</button>
+		<button class="btn reset">Reset</button>
+	</div>
+
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>
